@@ -1,4 +1,4 @@
-# Open WebUI 👋
+# Spiral WebUI 👋
 
 ![GitHub stars](https://img.shields.io/github/stars/olveirap/SpiralWebUI?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/olveirap/SpiralWebUI?style=social)
@@ -248,7 +248,3 @@ If you have any questions, suggestions, or need assistance, please open an issue
     <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=olveirap/SpiralWebUI&type=Date" />
   </picture>
 </a>
-
----
-
-Created by [Timothy Jaeryang Baek](https://github.com/tjbck) - Let's make Open WebUI even more amazing together! 💪
