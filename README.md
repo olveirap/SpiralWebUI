@@ -65,7 +65,7 @@ For more information, be sure to check out our [Open WebUI Documentation](https:
 
 Want to learn more about Open WebUI's features? Check out our [Open WebUI documentation](https://docs.openwebui.com/features) for a comprehensive overview!
 
-## SpiralWebUI Unique Features (Planned)
+## Spiral WebUI Unique Features (Planned)
 
 - **Decentralized Interaction Storage:** User prompts and LLM responses are encrypted and stored on decentralized storage (planned: IPFS), giving users control over their data blobs.
 
