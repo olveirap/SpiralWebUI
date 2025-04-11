@@ -1,24 +1,24 @@
-# Open WebUI 👋
+# Spiral WebUI 👋
 
-![GitHub stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social)
-![GitHub forks](https://img.shields.io/github/forks/open-webui/open-webui?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/open-webui/open-webui?style=social)
-![GitHub repo size](https://img.shields.io/github/repo-size/open-webui/open-webui)
-![GitHub language count](https://img.shields.io/github/languages/count/open-webui/open-webui)
-![GitHub top language](https://img.shields.io/github/languages/top/open-webui/open-webui)
-![GitHub last commit](https://img.shields.io/github/last-commit/open-webui/open-webui?color=red)
-![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Follama-webui%2Follama-wbui&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
-[![Discord](https://img.shields.io/badge/Discord-Open_WebUI-blue?logo=discord&logoColor=white)](https://discord.gg/5rJgQTnV4s)
-[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/tjbck)
+![GitHub stars](https://img.shields.io/github/stars/olveirap/SpiralWebUI?style=social)
+![GitHub forks](https://img.shields.io/github/forks/olveirap/SpiralWebUI?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/olveirap/SpiralWebUI?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/olveirap/SpiralWebUI)
+![GitHub language count](https://img.shields.io/github/languages/count/olveirap/SpiralWebUI)
+![GitHub top language](https://img.shields.io/github/languages/top/olveirap/SpiralWebUI)
+![GitHub last commit](https://img.shields.io/github/last-commit/olveirap/SpiralWebUI?color=red)
+
+**Note: This is the repository for Spiral WebUI, a fork of Open WebUI focused on democratizing the LLM data flywheel via decentralized storage, provenance, and feedback. See the 'Vision' section below for details.**
+
+Large, closed-source language models benefit immensely from vast, proprietary data flywheels derived from user interactions, creating a significant advantage over open-source alternatives. Spiral WebUI aims to democratize this data flywheel.
+
+As an open-source fork of the excellent Open WebUI project, Spiral WebUI empowers a community of users to collectively and transparently source high-quality training data (including preference pairs and corrections). By leveraging decentralized storage, blockchain provenance, and privacy-preserving techniques, we enable the creation of valuable datasets while respecting user ownership and control.
+
+Our goal is to provide the open-source AI community with the crucial, feedback-driven data resources needed to build, refine, and align powerful language models that are truly open, transparent, and competitive with closed-source counterparts.
 
 **Open WebUI is an [extensible](https://docs.openwebui.com/features/plugin/), feature-rich, and user-friendly self-hosted AI platform designed to operate entirely offline.** It supports various LLM runners like **Ollama** and **OpenAI-compatible APIs**, with **built-in inference engine** for RAG, making it a **powerful AI deployment solution**.
 
 ![Open WebUI Demo](./demo.gif)
-
-> [!TIP]  
-> **Looking for an [Enterprise Plan](https://docs.openwebui.com/enterprise)?** – **[Speak with Our Sales Team Today!](mailto:sales@openwebui.com)**
->
-> Get **enhanced capabilities**, including **custom theming and branding**, **Service Level Agreement (SLA) support**, **Long-Term Support (LTS) versions**, and **more!**
 
 For more information, be sure to check out our [Open WebUI Documentation](https://docs.openwebui.com/).
 
@@ -61,6 +61,21 @@ For more information, be sure to check out our [Open WebUI Documentation](https:
 - 🌟 **Continuous Updates**: We are committed to improving Open WebUI with regular updates, fixes, and new features.
 
 Want to learn more about Open WebUI's features? Check out our [Open WebUI documentation](https://docs.openwebui.com/features) for a comprehensive overview!
+
+## Spiral WebUI Unique Features (Planned)
+
+- **Decentralized Interaction Storage:** User prompts and LLM responses are encrypted and stored on decentralized storage (planned: IPFS), giving users control over their data blobs.
+
+- **Blockchain Provenance:** Metadata about interactions (user ID, timestamp, model used, storage CID) and feedback events are recorded immutably on a public blockchain (planned: Polygon PoS) for transparency and auditability.
+
+- **Enhanced Feedback Mechanism:** Includes standard thumbs up/down ratings and allows users to provide direct textual **corrections** to LLM responses.
+
+- **Privacy by Default:** Sensitive interaction content is encrypted on the backend before storage, ensuring only authorized parties (initially, the user) can decrypt it.
+
+- **Optional Public Contribution:** Users can explicitly choose to "opt-in" specific interactions or feedback instances, securely publishing the necessary decryption key to allow that specific data to contribute to public training datasets.
+
+- **Incentive System:** Rewards users for providing valuable feedback and contributing high-quality public data, initially through access credits or privileges for platform-hosted models.
+---
 
 ## 🔗 Also Check Out Open WebUI Community!
 
@@ -155,10 +170,6 @@ After installation, you can access Open WebUI at [http://localhost:3000](http://
 
 We offer various installation alternatives, including non-Docker native installation methods, Docker Compose, Kustomize, and Helm. Visit our [Open WebUI Documentation](https://docs.openwebui.com/getting-started/) or join our [Discord community](https://discord.gg/5rJgQTnV4s) for comprehensive guidance.
 
-### Troubleshooting
-
-Encountering connection issues? Our [Open WebUI Documentation](https://docs.openwebui.com/troubleshooting/) has got you covered. For further assistance and to join our vibrant community, visit the [Open WebUI Discord](https://discord.gg/5rJgQTnV4s).
-
 #### Open WebUI: Server Connection Error
 
 If you're experiencing connection issues, it’s often due to the WebUI docker container not being able to reach the Ollama server at 127.0.0.1:11434 (host.docker.internal:11434) inside the container . Use the `--network=host` flag in your docker command to resolve this. Note that the port changes from 3000 to 8080, resulting in the link: `http://localhost:8080`.
@@ -200,6 +211,21 @@ If you are running Open WebUI in an offline environment, you can set the `HF_HUB
 export HF_HUB_OFFLINE=1
 ```
 
+---
+
+## Relationship to Open WebUI
+
+This project is a **fork** of the excellent [OpenWebUI](https://github.com/open-webui/open-webui) project. We aim to maintain compatibility where possible but will be introducing significant modifications to the backend and potentially the database schema to support the decentralized features. We deeply appreciate the work done by the original OpenWebUI team.
+
+---
+
+## Current Status
+
+
+🚧 **Design & Planning Phase:** The core concepts, architecture, and technology stack are currently being defined. Implementation has not yet begun.
+
+---
+
 ## What's Next? 🌟
 
 Discover upcoming features on our roadmap in the [Open WebUI Documentation](https://docs.openwebui.com/roadmap/).
@@ -215,14 +241,10 @@ If you have any questions, suggestions, or need assistance, please open an issue
 
 ## Star History
 
-<a href="https://star-history.com/#open-webui/open-webui&Date">
+<a href="https://star-history.com/#olveirap/SpiralWebUI&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=open-webui/open-webui&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=open-webui/open-webui&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=open-webui/open-webui&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=olveirap/SpiralWebUI&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=olveirap/SpiralWebUI&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=olveirap/SpiralWebUI&type=Date" />
   </picture>
 </a>
-
----
-
-Created by [Timothy Jaeryang Baek](https://github.com/tjbck) - Let's make Open WebUI even more amazing together! 💪
